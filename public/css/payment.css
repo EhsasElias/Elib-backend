@@ -1,0 +1,231 @@
+body {  
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Tajawal';
+   
+}  
+
+
+  
+@font-face {
+    font-family: 'Tajawal';
+    src: url("../fonts/Tajawal-Regular.ttf");
+}
+.slidercontainer {  
+    direction: ltr;
+   width: 400px;
+    border: 1px solid #e3e4ecff;
+    border-radius: 7px; 
+    margin: 20px auto;  
+    display: flex;
+
+    flex-wrap: wrap;
+    padding: 15px;
+    
+}  
+ 
+.slidercontainer form{
+ 
+    margin: auto;
+    
+}
+.slidercontainer form input{
+    width: 60%;
+    border: 1px solid #e3e4ecff;
+    text-align: right;
+    padding: 8px;
+    border-radius: 7px;
+    color: #e3e4ecff;
+    font-family: 'Tajawal';
+    
+
+}
+.slidercontainer form input:focus{
+    color: #f26b55ff;
+    outline: none;
+    border: 1px solid #f26b55ff;
+}
+.content {  
+    width: 400px;
+    font-size: 30px;  
+    text-align: center; 
+    margin: auto; 
+}  
+ #CArt{
+     margin: auto;
+ }
+.showSlide{
+    display: none;
+}
+.show{
+  
+    display: block !important;
+    
+
+}
+.fade {  
+   
+    display: none !important;  
+   
+
+}  
+.productDesign{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    width: 80%;
+    margin: 10px auto;
+}
+.total{
+    border-top: 2px solid #e3e4ecff;
+}
+.slidercontainer form label{
+    width: 60%;
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    font-family: 'Tajawal';
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+ 
+#Ptype{
+    width: 60%;
+   text-align: right;
+   margin: auto;
+}
+#Ptype .fa-cc-visa{
+    color: navy;
+}
+#Ptype .fa-cc-amex{
+    color: blue;
+}
+#Ptype .fa-cc-mastercard{
+    color: red;
+}
+.submit{
+    
+    font-size: 30px;
+    color: #87c255;
+}
+.submit .fa-check-circle-o{
+    font-size: 100px;
+    margin: 0;
+}
+/* stteper */
+:root{
+    --circal-defult:#f8f8f8;
+    --circal-active:#87c255;
+    --width-active:0;
+}
+.container {
+    direction: ltr;
+    display: flex;
+    width: 550px;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: auto;
+}
+
+.progress{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    
+    align-items: center;
+    
+
+}
+
+.progress::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 100%;
+    background-color: var(--circal-defult);
+    height: 2px;
+    align-items: center;
+    z-index: -2;
+}
+.progress-active{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+   
+    align-items: center;
+    
+    
+}
+.progress-active::before{
+    transition: 1s;
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: var(--width-active);
+    height: 2px;
+    background-color: var(--circal-active);
+    z-index: -1;
+    align-items: center;
+}
+.circal{
+    background-color: var(--circal-defult);
+    height: 40px;
+    width: 40px;
+    color: #c7c7c7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.container-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px auto ;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+}
+
+.btn{
+background-color: #f26b55ff;
+color: white;
+border: none;
+border-radius: 50px;
+padding: 10px 40px;
+cursor: pointer;  
+font-family: 'Tajawal';
+
+}
+.active{
+    transition: 1s;
+    color: var(--circal-active);
+    border: 2px solid var(--circal-active);
+}
+
+
+@media only screen and (max-width: 600px){
+  body{
+ overflow-x: hidden;
+    margin: auto;
+  }
+   .slidercontainer{
+       margin: auto;
+       display: block;
+ }
+    .container{
+        width: 95% !important;
+        margin: auto;
+ }
+ 
+   
+}
